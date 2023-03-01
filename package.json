@@ -1,0 +1,44 @@
+{
+  "name": "uwebx-rdnd-components",
+  "version": "1.0.0",
+  "description": "UWebX React Drag & Drop Components",
+  "main": "index.js",
+  "author": "Agilan Deenadhayalan",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://Agi-Developer@github.com:UWebX/uwebx-rdnd-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UWebX/uwebx-rdnd-components/issues"
+  },
+  "homepage": "https://github.com/UWebX/uwebx-rdnd-components#README",
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "lint": "nx run-many --target=lint --all",
+    "test": "nx run-many --target=test --all",
+    "start": "start-storybook",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@nrwl/cli": "latest",
+    "@nrwl/jest": "latest",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/tao": "latest",
+    "@nrwl/workspace": "latest",
+    "@storybook/addon-actions": "latest",
+    "@storybook/addon-essentials": "latest",
+    "@storybook/addon-links": "latest",
+    "@storybook/react": "latest",
+    "gh-pages": "latest",
+    "nx": "latest",
+    "prettier": "latest",
+    "@types/react": "latest",
+    "typescript": "latest"
+  },
+  "workspaces": [
+    "apps/*",
+    "scripts",
+    "packages/*"
+  ]
+}

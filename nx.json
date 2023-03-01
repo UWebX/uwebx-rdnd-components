@@ -1,0 +1,41 @@
+{
+  "extends": "nx/presets/npm.json",
+  "npmScope": "my-ui-library",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint", "package", "prepare"],
+        "accessToken": "NGNkOTJjODQtOTQ2NS00YTgyLTk0NDYtMGQ1OTJmOWNmN2M1fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "prepare": [
+      {
+        "target": "prepare",
+        "projects": "dependencies"
+      }
+    ],
+    "package": [
+      {
+        "target": "package",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "pluginsConfig": {
+    "@nrwl/js": {
+      "analyzeSourceFiles": false
+    }
+  }
+}
